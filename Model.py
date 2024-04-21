@@ -23,7 +23,6 @@ class Model:
     def getAllData(self):
         self.cur.execute("SELECT * FROM ATM")
         result = self.cur.fetchall()
-        #print(result)
         self.con.commit()
         return result
 
