@@ -183,7 +183,7 @@ class StartPage(Config):
         def slideShow():
             img = next(photos)
             displayCanvas.config(image=img)
-            self.after(2500, slideShow)  # 2.5 seconds
+            self.after(2500, slideShow)
 
         displayCanvas = tk.Label(self,
                                  text='',
@@ -211,7 +211,7 @@ class MenuPage(Config):
             if currentTime.hour < 12:
                 greeting_time_label.config(text="Good Morning,")
             elif 12 <= currentTime.hour < 18:
-                greeting_time_label.config(text="Good Afternoon," )
+                greeting_time_label.config(text="Good Afternoon,")
             else:
                 greeting_time_label.config(text="Good Evening,")
 
