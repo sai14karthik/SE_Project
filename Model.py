@@ -5,7 +5,7 @@ class Model:
         self.con = sqlite3.connect('atm.db')
         self.cur = self.con.cursor()
         self.cur.execute(""" CREATE TABLE if not exists ATM(
-                                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                id INTEGER PRIMARY KEY ,
                                 Account_no integer type UNIQUE,
                                 Name text,
                                 Surname text,
@@ -17,7 +17,6 @@ class Model:
         self.values = (int(account_no), str(name), str(surname), int(password), int(amount))
         self.cur.execute("INSERT INTO ATM (Account_no, Name, Surname, Password, Amount) "
                          "values (?,?,?,?,?)", self.values)
-        #print(self.cur.fetchall())
         self.con.commit()
 
     def getAllData(self):

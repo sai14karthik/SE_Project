@@ -142,7 +142,7 @@ class StartPage(Config):
             elif password_entry_box.get() == "":
                 messagebox.showinfo("SRM AP ATM Machine", " Password cannot be empty.")
                 account_no_entry.delete(0, END)
-            elif (account_no_entry.get() == "Doctor" and my_password.get() == '23815'):
+            elif (account_no_entry.get() == "admin" and my_password.get() == '1234'):
                 controller.show_frame('TellerMenuPage')
                 account_no_entry.delete(0, END)
                 password_entry_box.delete(0, END)
