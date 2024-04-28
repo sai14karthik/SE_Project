@@ -1,1 +1,0 @@
-es/common/icon.ico
