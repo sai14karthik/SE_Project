@@ -361,9 +361,10 @@ class WithdrawPage(Config):
             if int(cash.get()) <=0:
                 messagebox.showerror("SRM AP ATM Machine", "Withdraw money cant be 0 or negative")
                 
-            if current_balance <=0:
+                
+            elif current_balance <=0:
                 messagebox.showinfo("SRM AP ATM Machine", "You Do not Have No Money")
-            if int(cash.get()) > current_balance:
+            elif int(cash.get()) > current_balance:
                 messagebox.showinfo("SRM AP ATM Machine", "There is not enough balance.")
             else:
                 current_balance -= int(cash.get())
